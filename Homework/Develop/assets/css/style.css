@@ -4,6 +4,7 @@
     --seoheader:#d9dcd6;
     --benefitsbackground:#2589bd;
     --contentbackground:#0072bb; 
+    --headerbackground:#2a607c;
 }
 
 
@@ -22,9 +23,10 @@ body {
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
+    background-color: var(--headerbackground);
     color:var(--header);
-    width: 100%
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .header h1 {
@@ -42,6 +44,8 @@ body {
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+    display: contents;
+    text-align: end;
 }
 
 .header nav ul {
@@ -85,7 +89,8 @@ p {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
-}
+    flex-wrap: wrap;
+ }
 
 .benefits {
     margin-right: 20px;
@@ -96,6 +101,8 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--benefitsbackground);
+    flex-wrap: wrap;
+    display: flex;
 }
 
 .benefit-lead {
@@ -209,4 +216,27 @@ footer {
 
 .footer h2 {
     font-size: 20px;
+}
+/* Media queries - Tablets */
+@media screen and (max-width:992px){
+    .header {
+        background-color: var(--header);
+        background-color: var(--headerbackground);
+}
+
+/* Media queries - Large smartphones */
+}
+@media screen and (max-width:768px){
+    .header nav{
+        background-color: var(--header);
+        background-color: var(--headerbackground);
+    }
+
+/* Media queries - Small smartphones */
+}
+@media screen and (max-width:576px){
+    .benefits{
+        background-color: var(--header);
+        background-color: var(--benefitsbackground);
+    }
 }
